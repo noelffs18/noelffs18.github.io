@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="img/logoblanco.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>NoelShishas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <!-- Sección izquierda: Logo + Categorías -->
+        <div class="menu-logo d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand navbar-logo" href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+
+            <!-- Botones de categorías -->
+            <div class="d-flex gap-3 ms-4">
+                <button class="btn btn-category" onclick="location.href='index.html'">Inicio</button>
+                <button class="btn btn-category" onclick="location.href='cachimba.html'">Cachimbas
+                    <img src="img/image.png" class="btn-icon"> 
+                </button>
+                <button class="btn btn-category" onclick="location.href='tabaco.html'">Tabacos
+                    <img src="img/image(1).png" class="btn-icon"> 
+                </button>
+                <button class="btn btn-category" onclick="location.href='accesorios.html'">Accesorios
+                    <img src="img/image(2).png" class="btn-icon"> 
+                </button>
+            </div>
+        </div>
+
+        <!-- Sección derecha: Íconos de usuario y carrito -->
+        <div class="d-flex align-items-center gap-3">
+            <a href="#" onclick="abrirModal()"><img src="img/usuario.png" alt="Usuario" class="icon"></a>
+            <a href="#"><img src="img/7168070.png" alt="Carrito" class="icon"></a>
+        </div>
+    </div>
+</nav>
+
+<section class="cachimbas-container">
+        <h2 class="title">CACHIMBAS</h2>
+
+        <div class="cachimbas-grid">
+            <!-- Primera fila -->
+            <div class="cachimba">
+                <img src="img/embery.png" alt="Embery Mono Wave 3.0">
+                <p class="name">EMBERY MONO WAVE 3.0</p>
+                <p class="price">219,00 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/alpha.png" alt="Alpha Hookah S Red Candy">
+                <p class="name">ALPHA HOOKAH S RED CANDY</p>
+                <p class="price">249,95 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/diavla.png" alt="Diavla Mini Red">
+                <p class="name">DIAVLA MINI RED</p>
+                <p class="price">99,95 €</p>
+            </div>
+
+            <!-- Segunda fila (agregada) -->
+            <div class="cachimba">
+                <img src="img/cachimba-chameleon-mini-crazy-superhero-hulk-1100x1100-1.jpeg" alt="Modelo 4">
+                <p class="name">CHARMELEON MINI</p>
+                <p class="price">129,00 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/rocket.png" alt="Modelo 5">
+                <p class="name">MR. SHISHA ROCKET 2.0</p>
+                <p class="price">99,95 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/mozze.png" alt="Modelo 6">
+                <p class="name">MOZZE BREEZE 2</p>
+                <p class="price">199,00 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/Cachimba-Nayb-Baby-morada-humo-blanco-transformed.jpeg" alt="Embery Mono Wave 3.0">
+                <p class="name">NAYB BABY</p>
+                <p class="price">179,99 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/alkimia.jpg" alt="Alpha Hookah S Red Candy">
+                <p class="name">DMNT ALKIMIA PINK</p>
+                <p class="price">100,95 €</p>
+            </div>
+            <div class="cachimba">
+                <img src="img/megatron.jpg" alt="Diavla Mini Red">
+                <p class="name">MR SHISHA MEGATRON</p>
+                <p class="price">149,95 €</p>
+            </div>
+        </div>
+
+    </section>
+<!-- Modal para el formulario de inicio de sesión -->
+<div id="modalUsuario" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="close" onclick="cerrarModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de inicio de sesión -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailUsuario" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="emailUsuario" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contraseñaUsuario" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseñaUsuario" placeholder="Contraseña">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                            <a href="#" class="text-decoration-none">¿No estás registrado? Regístrate</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-item"><strong>NoelShishas</strong></div>
+    <div class="footer-item"><img src="img/logo.png" alt="Logo NoelShishas" class="logo"></div>
+    <div class="footer-contact">
+        <div class="contact-item">
+            <img src="img/email.png" alt="Email" class="icon">
+            <span>noelshishas@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <img src="img/phonr.png" alt="Teléfono" class="icon">
+            <span>654 92 99 01</span>
+        </div>
+    </div>
+    <div class="footer-item">
+        <img src="img/image-removebg-preview (2).png" alt="Ubicación" class="ubi">
+    </div>
+</footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

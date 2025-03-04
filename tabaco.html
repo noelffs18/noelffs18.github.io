@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="img/logoblanco.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>NoelShishas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <!-- Sección izquierda: Logo + Categorías -->
+        <div class="menu-logo d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand navbar-logo" href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+
+            <!-- Botones de categorías -->
+            <div class="d-flex gap-3 ms-4">
+                <button class="btn btn-category" onclick="location.href='index.html'">Inicio</button>
+                <button class="btn btn-category" onclick="location.href='cachimba.html'">Cachimbas
+                    <img src="img/image.png" class="btn-icon"> 
+                </button>
+                <button class="btn btn-category" onclick="location.href='tabaco.html'">Tabacos
+                    <img src="img/image(1).png" class="btn-icon"> 
+                </button>
+                <button class="btn btn-category" onclick="location.href='accesorios.html'">Accesorios
+                    <img src="img/image(2).png" class="btn-icon"> 
+                </button>
+            </div>
+        </div>
+
+        <!-- Sección derecha: Íconos de usuario y carrito -->
+        <div class="d-flex align-items-center gap-3">
+            <a href="#" onclick="abrirModal()"><img src="img/usuario.png" alt="Usuario" class="icon"></a>
+            <a href="#"><img src="img/7168070.png" alt="Carrito" class="icon"></a>
+        </div>
+    </div>
+</nav>
+
+<section class="tabaco-container">
+        <h2 class="title">TABACOS</h2>
+
+        <div class="tabaco-grid">
+            <!-- Primera fila -->
+            <div class="tabaco">
+                <img src="img/miss.jpg" alt="Embery Mono Wave 3.0">
+                <div class="tabaco-info">
+                    <p class="name">MISS JOSSY 200GR</p>
+                    <p class="price">Sabor dulce y frutal, con un toque exótico. Miss Josy es una de las variedades más populares de Hoster.</p>
+                </div>
+            </div>
+            <div class="tabaco">
+                <img src="img/uva.jpg" alt="Alpha Hookah S Red Candy">
+                 <div class="tabaco-info">   
+                    <p class="name">UVA MENTA200GR</p>
+                    <p class="price">Refrescante combinación de uva y menta, suave y equilibrado.</p>
+                </div>  
+            </div>
+            <div class="tabaco">
+                <img src="img/blue.jpeg" alt="Alpha Hookah S Red Candy">
+                    <div class="tabaco-info">   
+                        <p class="name">BLUE MIST200GR</p>
+                        <p class="price">Arándano con menta suave, ideal para una sesión duradera y de sabor intenso.</p>
+                    </div>
+            </div>
+            <div class="tabaco">
+                <img src="img/love.jpg" alt="Embery Mono Wave 3.0">
+                <div class="tabaco-info">
+                    <p class="name">LOVE 66 200GR</p>
+                    <p class="price">Mezcla tropical de melón, sandía y menta, uno de los favoritos de Adalya.</p>
+                </div>
+            </div>
+             <div class="tabaco">
+                <img src="img/manzana.webp" alt="Embery Mono Wave 3.0">
+                <div class="tabaco-info">
+                    <p class="name">DOBLE MANZANA 200GR.</p>
+                    <p class="price">Clásico de doble manzana, económico y preferido entre los sabores tradicionales..</p>
+                </div>
+            </div>
+             <div class="tabaco">
+                <img src="img/nana.jpg" alt="Embery Mono Wave 3.0">
+                <div class="tabaco-info">
+                    <p class="name">BLACK NANA 200GR</p>
+                    <p class="price">Combina el dulzor de la uva moscada con un toque fresco, ideal para disfrutar en cualquier sesión</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+<!-- Modal para el formulario de inicio de sesión -->
+<div id="modalUsuario" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="close" onclick="cerrarModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de inicio de sesión -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailUsuario" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="emailUsuario" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contraseñaUsuario" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseñaUsuario" placeholder="Contraseña">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                            <a href="#" class="text-decoration-none">¿No estás registrado? Regístrate</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-item"><strong>NoelShishas</strong></div>
+    <div class="footer-item"><img src="img/logo.png" alt="Logo NoelShishas" class="logo"></div>
+    <div class="footer-contact">
+        <div class="contact-item">
+            <img src="img/email.png" alt="Email" class="icon">
+            <span>noelshishas@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <img src="img/phonr.png" alt="Teléfono" class="icon">
+            <span>654 92 99 01</span>
+        </div>
+    </div>
+    <div class="footer-item">
+        <img src="img/image-removebg-preview (2).png" alt="Ubicación" class="ubi">
+    </div>
+</footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

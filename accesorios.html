@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="img/logoblanco.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>NoelShishas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <!-- Sección izquierda: Logo + Categorías -->
+        <div class="menu-logo d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand navbar-logo" href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+
+            <!-- Botones de categorías -->
+            <div class="d-flex gap-3 ms-4">
+                <button class="btn btn-category" onclick="location.href='index.html'">Inicio</button>
+                <button class="btn btn-category" onclick="location.href='cachimba.html'">Cachimbas
+                    <img src="img/image.png" class="btn-icon"> 
+                </button>
+                <button class="btn btn-category" onclick="location.href='tabaco.html'">Tabacos
+                    <img src="img/image(1).png" class="btn-icon"> 
+                </button>
+                <button class="btn btn-category" onclick="location.href='accesorios.html'">Accesorios
+                    <img src="img/image(2).png" class="btn-icon"> 
+                </button>
+            </div>
+        </div>
+
+        <!-- Sección derecha: Íconos de usuario y carrito -->
+        <div class="d-flex align-items-center gap-3">
+            <a href="#" onclick="abrirModal()"><img src="img/usuario.png" alt="Usuario" class="icon"></a>
+            <a href="#"><img src="img/7168070.png" alt="Carrito" class="icon"></a>
+        </div>
+    </div>
+</nav>
+
+
+<section class="accesorios-container">
+    <h2 class="title">ACCESORIOS</h2>
+    
+    <div class="categoria">
+        <h2>CARBONES</h2>
+        <div class="accesorio-grid">
+            <div class="accesorio">
+                <img src="img/carbon1.jpg" alt="Carbon Cocosoul 26 MM">
+                <p class="name">CARBON COCOSOUL 26 MM</p>
+                <p class="price">7,00 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/carbon2.jpg" alt="Carbon King Coco 28 MM">
+                <p class="name">CARBON KING COCO 28 MM</p>
+                <p class="price">7,50 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/carbon3.jpg" alt="King Coco 26 MM 250 GR">
+                <p class="name">KING COCO 26 MM 250 GR</p>
+                <p class="price">1,95 €</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="categoria">
+        <h2>HORNILLOS</h2>
+        <div class="accesorio-grid">
+            <div class="accesorio">
+                <img src="img/hornillo1.jpg" alt="Hornillo Electrico 1000W">
+                <p class="name">HORNILLO ELECTRICO 1000W</p>
+                <p class="price">15,00 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/hornillo2.jpg" alt="Hornillo Especial Catering">
+                <p class="name">HORNILLO ESPECIAL CATERING</p>
+                <p class="price">25,00 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/hornillo.png" alt="Hornillo Multicolor 800W">
+                <p class="name">HORNILLO MULTICOLOR 800W</p>
+                <p class="price">19,95 €</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="categoria">
+        <h2>BASES</h2>
+        <div class="accesorio-grid">
+            <div class="accesorio">
+                <img src="img/base.png" alt="Base Rusa Pink Tilled">
+                <p class="name">BASE RUSA PINK TILLED</p>
+                <p class="price">39,95 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/hq.jpg" alt="Base HQ Basic Clear">
+                <p class="name">BASE HQ BASIC CLEAR</p>
+                <p class="price">30,00 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/base-oro.png" alt="Base Tradicional Gold">
+                <p class="name">BASE TRADICIONAL GOLD</p>
+                <p class="price">29,95 €</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="categoria">
+        <h2>VARIOS</h2>
+        <div class="accesorio-grid">
+            <div class="accesorio">
+                <img src="img/plato.png" alt="Plato Cascada Mini Khalifa">
+                <p class="name">PLATO CASCADA MINI KHALIFA</p>
+                <p class="price">9,95 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/junta.png" alt="Junta Silicona Manguera x2">
+                <p class="name">JUNTA SILICONA MANGUERA x2</p>
+                <p class="price">0,50 €</p>
+            </div>
+            <div class="accesorio">
+                <img src="img/boquilla.png" alt="Boquilla Madera">
+                <p class="name">BOQUILLA MADERA</p>
+                <p class="price">17,50 €</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal para el formulario de inicio de sesión -->
+<div id="modalUsuario" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="close" onclick="cerrarModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de inicio de sesión -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailUsuario" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="emailUsuario" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contraseñaUsuario" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseñaUsuario" placeholder="Contraseña">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                            <a href="#" class="text-decoration-none">¿No estás registrado? Regístrate</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-item"><strong>NoelShishas</strong></div>
+    <div class="footer-item"><img src="img/logo.png" alt="Logo NoelShishas" class="logo"></div>
+    <div class="footer-contact">
+        <div class="contact-item">
+            <img src="img/email.png" alt="Email" class="icon">
+            <span>noelshishas@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <img src="img/phonr.png" alt="Teléfono" class="icon">
+            <span>654 92 99 01</span>
+        </div>
+    </div>
+    <div class="footer-item">
+        <img src="img/image-removebg-preview (2).png" alt="Ubicación" class="ubi">
+    </div>
+</footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
